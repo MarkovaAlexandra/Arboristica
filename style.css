@@ -599,6 +599,13 @@
     gap: 24px;
   }
 }
+.amountForUser {
+  margin-top: 16px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1117,6 +1124,7 @@ textarea {
   opacity: 0;
   visibility: hidden;
   z-index: -10;
+  display: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1141,6 +1149,7 @@ textarea {
   }
 }
 ._open {
+  display: flex;
   -webkit-animation: showpopup 3s ease-in-out;
           animation: showpopup 3s ease-in-out;
 }

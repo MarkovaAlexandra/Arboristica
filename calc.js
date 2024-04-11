@@ -3,10 +3,13 @@
 const methodChoise = document.getElementsByName('arb_method');
 const diametrChoise = document.getElementsByName('arb_diametr');
 const calcBtn = document.querySelector("#calc-btn");
-const calcForm = document.querySelector('.calc');
+const form = document.getElementById("form-calc");
+const amountForUser = document.querySelector('.amountForUser');
+console.log(amountForUser);
+form.addEventListener("submit", calculate);
 
-
-function calculate() {
+function calculate(e) {
+    e.preventDefault();
     let diametr = null;
     let koefficient = null;
     let amount = null;
@@ -32,10 +35,7 @@ function calculate() {
     }
     for (let i = 0; i < diametrChoise.length; i++) {
         if (diametrChoise[i].type == "radio" && diametrChoise[i].checked) {
-            console.log(diametrChoise[i].id);
             diametr = diametrChoise[i].id.split('_')[1];
-            console.log(typeof (diametr));
-            console.log('diametr = ' + diametr);
         }
     }
     // если не выбрано никакое значение
@@ -46,13 +46,10 @@ function calculate() {
 
     if (mistakes == 0) {
         amount = diametr * diametr * koefficient;
-        amountDiv.innerText = `Ориентировочная стоимость работ составит ${amount} рублей`;
-        popapShowAmount.classList.add('_open');
+        let message = `Ориентировочная стоимость составит ${amount} рублей`
+        amountForUser.innerText = message;
     }
 }
-
-
-calcBtn.addEventListener('click', calculate);
 
 
 const koef = [
@@ -86,14 +83,4 @@ const koef = [
     },
 ]
 
-const form = document.querySelector("form");
-const amountDiv = document.querySelector('.popup__content');
-const popapShowAmount = document.querySelector("._show-amount");
 
-calcForm.addEventListener(
-    "submit",
-    (event) => {
-        event.preventDefault();
-    },
-
-);

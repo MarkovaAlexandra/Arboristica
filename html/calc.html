@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/32fa6dd818.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../calc_style.css">
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -159,7 +158,8 @@
                     </tbody>
                 </table>
             </div>
-            <form class="calc">
+
+            <form action="#" class="calc" id="form-calc">
                 <h1 class="calc_title">Калькулятор стоимости</h1>
                 <div class="calc_methods_wrapper">
                     <p class="calc_subtitle">Удаление дерева</p>
@@ -234,6 +234,7 @@
                     </div>
                 </div>
                 <button class="btn" id="calc-btn">РАССЧИТАТЬ</button>
+                <div class="amountForUser"></div>
             </form>
 
         </div>
@@ -268,9 +269,7 @@
             <a class="grey" href="#">политика конфиденциальности</a>
         </div>
     </footer>
-    <div class="popup _show-amount">
-        <div class="popup__content"></div>
-    </div>
+
 
     <script src="../calc.js"></script>
     <script src="../script.js"></script>
