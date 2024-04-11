@@ -109,7 +109,6 @@
 .articles-banner {
   background-image: url("img/banner_articles.jpg");
   min-height: 318px;
-  margin-top: 63px;
   margin-bottom: 50px;
   background-size: cover;
   background-position: center;
@@ -186,11 +185,13 @@
 }
 
 ._article02 {
-  background-image: url();
+  background-image: url("img/article02_prew.jpg");
+  background-position: top;
 }
 
 ._article03 {
-  background-image: url();
+  background-image: url("img/article03_prew.jpg");
+  background-position: top;
 }
 
 .article-body {
@@ -297,21 +298,6 @@
   text-align: end;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-body {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background: #fff;
-}
-
 :root {
   --main-black: rgba(10, 10, 10, 1);
   --main-grey: #e0e0e0;
@@ -323,6 +309,8 @@ body {
 
 .calc_center {
   padding-left: 23%;
+  margin-top: 63px;
+  padding-top: 50px;
 }
 
 .price {

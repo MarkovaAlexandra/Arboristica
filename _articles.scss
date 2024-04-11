@@ -1,7 +1,7 @@
 .articles-banner {
     background-image: url('img/banner_articles.jpg');
     min-height: 318px;
-    margin-top: 63px;
+    // margin-top: 63px;
     margin-bottom: 50px;
     background-size: cover;
     background-position: center;
@@ -103,11 +103,13 @@
 }
 
 ._article02 {
-    background-image: url(); //баннер для статьи 2
+    background-image: url('img/article02_prew.jpg'); //баннер для статьи 2
+    background-position: top;
 }
 
 ._article03 {
-    background-image: url(); //баннер для статьи 3
+    background-image: url('img/article03_prew.jpg'); //баннер для статьи 3
+    background-position: top;
 }
 
 .article-body {
